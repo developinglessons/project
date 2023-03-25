@@ -39,5 +39,24 @@ console.log(2*4 == '8');
 console.log(2*4 === '8');
 console.log(2*4 === 8);
 
+console.log(2 + 2 * 2 !== '6');
+
+//!= не равно
+//!== строго по типу не равно
+
+//означает И
+&&
+//означает или
+||
+
+const isChecked = false,
+      isClose = false;
+
+console.log(isChecked || !isClose);
+console.log(isChecked && isClose);
+
+// ! - оператор отрицания
+
+const data = 30;
 
 
