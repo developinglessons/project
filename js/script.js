@@ -1,62 +1,19 @@
-'use strict';
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-console.log('arr' + ' - object');
-console.log(4 + '5');
-//Унарный плюс, превращает 5 в число
-console.log(4 + +'5');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privar: false
+};
 
-//инкремент и декремент
-//префиксная форма и постфиксная форма
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('На сколько оцените его?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('На сколько оцените его?', '');
 
-let incr = 10,
-    decr = 10;
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-//постфиксный вариант
-//incr++; 
-//это опрератор инкремента - увеличение на единицу
-//decr--;
-//оператор декремента - унименьшение на единицу
-
-//это префиксный вариант
-//++incr
-//--decr
-
-//так не работает (потому что сначала возвращает переменную)
-//console.log(incr++);
-//console.log(decr--);
-
-//а так работает
-console.log(++incr);
-console.log(--decr);
-
-//% - разделить, результат - остаток
-console.log(5%2);
-//работает
-console.log(2*4 == 8);
-//работает
-console.log(2*4 == '8');
-// === это строгое сравнение, а 8 это строка, поэтому не сработает
-console.log(2*4 === '8');
-console.log(2*4 === 8);
-
-console.log(2 + 2 * 2 !== '6');
-
-//!= не равно
-//!== строго по типу не равно
-
-//означает И
-&&
-//означает или
-||
-
-const isChecked = false,
-      isClose = false;
-
-console.log(isChecked || !isClose);
-console.log(isChecked && isClose);
-
-// ! - оператор отрицания
-
-const data = 30;
-
-
+console.log(personalMovieDB);
